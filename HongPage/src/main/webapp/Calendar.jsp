@@ -174,6 +174,8 @@ td.before {
 	Date date = new Date();
 	int year = date.getYear() + 1900;
 	int month = date.getMonth() + 1;
+	int today_month = date.getMonth() + 1;
+	int today_day = date.getDate();
 
 	//	오류사항 걸러주기	
 	try {
@@ -194,6 +196,10 @@ td.before {
 	<!-- 달력 만들기 -->
 	<table width="700" align="center" border="1" cellpadding="5"
 		cellspacing="0">
+		<tr>
+			<th id="title" colspan="7"><%=year %>년 <%=today_month %>월 <%=today_day%> 일
+			</th>
+		</tr>
 		<tr>
 			<!-- 이전달 버튼 만들기 -->
 			<th>
